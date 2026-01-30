@@ -2,14 +2,14 @@
 # Find and fix the error
 
 def max_subarray_sum(arr):
-    max_sum = arr[0]
-    current_sum = arr[0]
-    
-    for i in range(1, len(arr)):
-        current_sum = max(arr[i], current_sum + arr[i])
-        max_sum = max(max_sum, current_sum)
-    
+    max_sum = float('-inf')
+    current_sum = 0
+    for num in arr:
+        current_sum += num
+        if current_sum > max_sum:
+            max_sum = current_sum
+        if current_sum < 0:
+            current_sum = 0
     return max_sum
-
 numbers = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 print(f"Maximum subarray sum: {max_subarray_sum(numbers)}")
