@@ -5,8 +5,7 @@ def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
-
-def lcm(a, b):
-    return (a * b) // gcd(a, b)
+def lcm(x, y):
+    return x * y // gcd(x, y)
 
 print(f"LCM of 12 and 18: {lcm(12, 18)}")
