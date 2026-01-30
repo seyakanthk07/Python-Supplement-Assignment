@@ -7,4 +7,4 @@ def area_of_circle(radius):
     return area
 
 r = "5"
-print(f"Area: {area_of_circle(r)}")
+print(f"Area: {area_of_circle(float(r))}")
