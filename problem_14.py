@@ -8,5 +8,4 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
-
 print(f"Is 17 prime? {is_prime(17)}")
