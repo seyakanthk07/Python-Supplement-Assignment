@@ -2,8 +2,8 @@
 # Find and fix the error
 
 def compound_interest(principal, rate, time, n):
-    amount = principal * (1 + rate / (n * 100)) ** (n * time)
-    return amount - principal
+    amount = principal * (1 + rate / (n * 100))**(n * time)
+    return round(amount, 2)
 
 p = 1000
 r = 5
