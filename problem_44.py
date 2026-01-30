@@ -2,9 +2,10 @@
 # Find and fix the error
 
 def fibonacci(n):
-    fib = [0, 1]
-    for i in range(2, n):
-        fib.append(fib[i-1] + fib[i-2])
-    return fib
-
+    fib_sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        fib_sequence.append(a)
+        a, b = b, a + b
+    return fib_sequence
 print(f"First 10 Fibonacci numbers: {fibonacci(10)}")
