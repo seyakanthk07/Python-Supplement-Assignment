@@ -3,14 +3,18 @@
 
 def are_balanced(expression):
     stack = []
+    opening = "({["
+    closing = ")}]"
+    match = {')': '(', '}': '{', ']': '['}
+    
     for char in expression:
-        if char == '(':
+        if char in opening:
             stack.append(char)
-        elif char == ')':
-            if len(stack) == 0:
+        elif char in closing:
+            if not stack or stack[-1] != match[char]:
                 return False
             stack.pop()
+    
     return len(stack) == 0
-
 expr = "((a + b) * (c - d))"
 print(f"Balanced: {are_balanced(expr)}")
