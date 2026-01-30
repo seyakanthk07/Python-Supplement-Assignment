@@ -2,7 +2,9 @@
 # Find and fix the error
 
 def are_anagrams(str1, str2):
-    return sorted(str1) == sorted(str2)
+    if len(str1) != len(str2):
+        return False
+    return sorted(str1.lower()) == sorted(str2.lower())
 
 word1 = "Listen"
 word2 = "Silent"
