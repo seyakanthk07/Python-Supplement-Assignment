@@ -2,9 +2,11 @@
 # Find and fix the error
 
 def remove_adjacent_duplicates(text):
-    result = []
-    for char in text:
-        if len(result) == 0 or result[-1] != char:
+    if not text:
+        return text
+    result = [text[0]]
+    for char in text[1:]:
+        if char != result[-1]:
             result.append(char)
     return "".join(result)
 
