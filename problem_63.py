@@ -8,6 +8,5 @@ def find_longest_word(sentence):
         if len(word) > len(longest):
             longest = word
     return longest
-
 text = "The quick brown fox jumps"
 print(f"Longest word: {find_longest_word(text)}")
