@@ -3,10 +3,12 @@
 
 def find_pairs(arr, target):
     pairs = []
-    for i in range(len(arr)):
-        for j in range(i, len(arr)):
-            if arr[i] + arr[j] == target:
-                pairs.append((arr[i], arr[j]))
+    seen = set()
+    for num in arr:
+        complement = target - num
+        if complement in seen:
+            pairs.append((complement, num))
+        seen.add(num)
     return pairs
 
 numbers = [1, 2, 3, 4, 5]
